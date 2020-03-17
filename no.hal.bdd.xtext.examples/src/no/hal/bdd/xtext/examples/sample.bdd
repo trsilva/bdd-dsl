@@ -29,3 +29,265 @@ Scenario: ex4
 given the balance of "account" is 1000
 when I open "account" in "account view"
 then the text of "balance field" is 1000
+
+
+// ----- New Examples -----
+
+// <fieldname> can be designed as Checkbox or Radio Button
+
+Given the field "<fieldname>" is unchecked
+When the field "<fieldname>" is unchecked
+Then the field "<fieldname>" is unchecked
+
+Given the field "<fieldname>" is checked
+When the field "<fieldname>" is checked
+Then the field "<fieldname>" is checked
+
+// <fieldname> can be designed as Checkbox
+
+When I assure the field "<fieldname>" is unchecked
+
+When I assure the field "<fieldname>" is checked
+
+// <fieldname> can be designed as Calendar, Checkbox, Radio Button or Link
+
+Given I choose "<fieldname>"
+When I choose "<fieldname>"
+Then I choose "<fieldname>"
+
+Given I select "<fieldname>"
+When I select "<fieldname>"
+Then I select "<fieldname>"
+
+// <index> is a String
+// <fieldname> can be designed as Dropdown List
+
+When I choose "<index>" by index in the field "<fieldname>"
+Then I choose "<index>" by index in the field "<fieldname>"
+
+// <option> is a String
+// <fieldname> can be designed as Calendar, Checkbox, Radio Button or Link
+
+When I choose "<option>" referring to "<fieldname>"
+Then I choose "<option>" referring to "<fieldname>"
+
+// <value> is a String
+// <fieldname> can be designed as Dropdown List
+
+When I choose the option of value "<value>" in the field "<fieldname>"
+Then I choose the option of value "<value>" in the field "<fieldname>"
+
+// <fieldname> can be designed as Menu, Menu Item, Button or Link
+
+When I click on "<fieldname>"
+Then I click on "<fieldname>"
+
+// <label> is a String
+// <fieldname> can be designed as Menu, Menu Item, Button, Link or Grid
+
+When I click on "<fieldname>" referring to "<label>"
+Then I click on "<fieldname>" referring to "<label>"
+
+// <fieldname> can be designed as Text Field
+
+When I do not type any value into the field "<fieldname>"
+
+When I reset the value of the field "<fieldname>"
+
+// <parameters> are Strings
+// <webpage> can be designed as Browser Window
+
+Given I go to "<webpage>"
+When I go to "<webpage>"
+Then I go to "<webpage>"
+
+Given I go to "<webpage>" with the parameters "<parameters>"
+When I go to "<webpage>" with the parameters "<parameters>"
+Then I go to "<webpage>" with the parameters "<parameters>"
+
+Given "<webpage>" is displayed
+When "<webpage>" is displayed
+Then "<webpage>" is displayed
+
+// <value> is a String
+// <fieldname> can be designed as Dropdown List, Text Field, Autocomplete or Calendar
+
+When I set "<value>" in the field "<fieldname>"
+Then I set "<value>" in the field "<fieldname>"
+
+When I try to set "<value>" in the field "<fieldname>"
+Then I try to set "<value>" in the field "<fieldname>"
+
+// <value> is a String
+// <fieldname> can be designed as Dropdown List or Text Field
+
+When I set "<value>" in the field referring to “<fieldname>”
+Then I set "<value>" in the field referring to “<fieldname>”
+
+// <value 1> and <value 2> are Strings
+// <fieldname> can be designed as Autocomplete
+
+When I type "<value 1>" and choose "<value 2>" in the field "<fieldname>"
+Then I type "<value 1>" and choose "<value 2>" in the field "<fieldname>"
+
+// <content> can be designed as Text
+
+Then "<content>" will be displayed
+
+Then "<content>" will not be displayed
+
+// <value> is a String
+// <fieldname> and <another fieldname> can be designed as Element
+
+Then will be displayed in the field "<fieldname>" the value "<value>"
+
+Then will not be displayed in the field "<fieldname>" the value "<value>"
+
+Then will be displayed the value "<value>" in the field "<fieldname>" referring to "<another fieldname>"
+
+Then will not be displayed the value "<value>" in the field "<fieldname>" referring to "<another fieldname>"
+
+Then will not be displayed the value "<value>" in the field "<fieldname>" referring to "<another fieldname>"
+
+Given "<fieldname>" is not visible
+When "<fieldname>" is not visible
+Then "<fieldname>" is not visible
+
+Given "<value>" referring to "<fieldname>" is not visible
+When "<value>" referring to "<fieldname>" is not visible
+Then "<value>" referring to "<fieldname>" is not visible
+
+Given I wait the field "<fieldname>" be visible, clickable and enable
+When I wait the field "<fieldname>" be visible, clickable and enable
+Then I wait the field "<fieldname>" be visible, clickable and enable
+
+Given I wait the field "<fieldname>" referring to "<another fieldname>" be visible, clickable and enable
+When I wait the field "<fieldname>" referring to "<another fieldname>" be visible, clickable and enable
+Then I wait the field "<fieldname>" referring to "<another fieldname>" be visible, clickable and enable
+
+Given the element "<fieldname>" is visible and disable
+When the element "<fieldname>" is visible and disable
+Then the element "<fieldname>" is visible and disable
+
+Given the element "<fieldname>" referring to "<another fieldname>" is visible and disable
+When the element "<fieldname>" referring to "<another fieldname>" is visible and disable
+Then the element "<fieldname>" referring to "<another fieldname>" is visible and disable
+
+When I set the value of the field "<fieldname>"
+Then I set the value of the field "<fieldname>"
+
+Given I obtain the value from the field "<fieldname>"
+When I obtain the value from the field "<fieldname>"
+Then I obtain the value from the field "<fieldname>"
+
+// <value> and <event> are Strings
+// <fieldname> can be designed as Text Field
+
+When I set "<value>" in the field "<fieldname>" and trigger the event "<event>"
+Then I set "<value>" in the field "<fieldname>" and trigger the event "<event>"
+
+When I type a random number in the field "<fieldname>"
+
+// <row> is a String
+// <fieldname> can be designed as Tree
+
+Given I click on the row "<row>" of the tree "<fieldname>"
+When I click on the row "<row>" of the tree "<fieldname>"
+Then I click on the row "<row>" of the tree "<fieldname>"
+
+// <prefix> is a String
+// <fieldname> can be designed as Text Field
+
+Given I type a random number with the prefix "<prefix>" in the field "<fieldname>"
+When I type a random number with the prefix "<prefix>" in the field "<fieldname>"
+Then I type a random number with the prefix "<prefix>" in the field "<fieldname>"
+
+// <value>, <fieldname> and <fieldnames> can be designed as Grid
+
+Given I set "<value>"
+When I set "<value>"
+
+When I set the field "<fieldname>"
+
+When I set the fields "<fieldnames>"
+
+// <dataset> is a String
+
+Given I select from the dataset "<dataset>"
+When I select from the dataset "<dataset>"
+
+// <key> and <value> are Strings
+
+Given I set the key "<key>" with the value "<value>"
+When I set the key "<key>" with the value "<value>"
+Then I set the key "<key>" with the value "<value>"
+
+// <variable> and <value> are Strings
+
+Given I define the variable "<variable>" with the value "<value>"
+When I define the variable "<variable>" with the value "<value>"
+Then I define the variable "<variable>" with the value "<value>"
+
+When I print on the console the value of the variable "<variable>"
+Then I print on the console the value of the variable "<variable>"
+
+When I print on the console the value of the variable "<variable>"
+
+// Apply to Window Dialog
+
+Given I confirm the dialog box
+When I confirm the dialog box
+Then I confirm the dialog box
+
+Given I cancel the dialog box
+When I cancel the dialog box
+Then I cancel the dialog box
+
+// <value> and <message> are Strings
+// Apply to Window Dialogs
+
+Given I set the value "<value>" in the dialog box
+When I set the value "<value>" in the dialog box
+Then I set the value "<value>" in the dialog box
+
+Then will be displayed "<message>" in the dialog box
+
+// <fieldname> can be designed as Menu, Menu Item, Button or Link
+
+When I move the mouse over "<fieldname>"
+
+// <row>, <cell>, <column>, <table>, <place>, <table text>, <text> and <option> are Strings
+// Apply to Grids
+
+When I click on the row "<row>" of the table "<table>" referring to "<fieldname>"
+Then I click on the row "<row>" of the table "<table>" referring to "<fieldname>"
+
+When I store the cell "<cell>" of the table "<table>" in "<place>"
+Then I store the cell "<cell>" of the table "<table>" in "<place>"
+
+When I store the column "<column>" of the table "<table>" in "<place>"
+Then I store the column "<column>" of the table "<table>" in "<place>"
+
+When I compare the text of the table cell "<table text>" with "<text>"
+Then I compare the text of the table cell "<table text>" with "<text>"
+
+When I compare the text of the table column "<table text>" with "<text>"
+Then I compare the text of the table column "<table text>" with "<text>"
+
+When I click on the cell "<cell>" of the table "<table>"
+Then I click on the cell "<cell>" of the table "<table>"
+
+When I click on the column "<column>" of the table "<table>"
+Then I click on the column "<column>" of the table "<table>"
+
+When I choose the option "<option>" in the cell of the table "<table>"
+Then I choose the option "<option>" in the cell of the table "<table>"
+
+When I choose the option "<option>" in the column of the table "<table>"
+Then I choose the option "<option>" in the column of the table "<table>"
+
+When I type the text "<text>" in the cell of the table "<table>"
+Then I type the text "<text>" in the cell of the table "<table>"
+
+When I type the text "<text>" in the column of the table "<table>"
+Then I type the text "<text>" in the column of the table "<table>"
